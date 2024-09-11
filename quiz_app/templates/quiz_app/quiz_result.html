@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="background-container-result-light-yellow">
+        <img src="{% static 'images/list.webp' %}" alt="Background Image" class="background-image-result-light-yellow">
+    </div>
+    <div class="container-result-light-yellow">
+        <h1 class="title-result-light-yellow">{{ result.quiz.title }} Result</h1>
+        <p class="info-result-light-yellow">User: {{ result.user.username }}</p>
+        <p class="info-result-light-yellow">Score: {{ result.score }}</p>
+        <p class="info-result-light-yellow">Total Questions: {{ result.quiz.question_set.count }}</p>
+        <a href="{% url 'quiz_list' %}" class="back-link-result-light-yellow">Back to Quiz List</a>
+    </div>
+</body>
+</html>

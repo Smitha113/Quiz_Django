@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz List</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body class="quizlist">
+    
+    <div class="quiz-background-container">
+        <img src="{% static 'images/pink.jpg' %}" class="quiz-background-image">
+    </div>
+    <div class="quiz-container">
+        <h1>CHOOSE YOUR TOPIC!</h1>
+        <ul>
+            {% for topic in topics %}
+                <li class="quiz-topic">
+                    <h2>{{ topic.name }}</h2>
+                    <ul class="quiz-list">
+                        {% for quiz in topic.quiz_set.all %}
+                            <li><a href="{% url 'quiz_detail' quiz.id %}">{{ quiz.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

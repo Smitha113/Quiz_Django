@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ quiz.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="background-container-detail">
+        <img src="{% static 'images/quiz.webp' %}" alt="Background Image" class="background-image-detail">
+    </div>
+    <div class="container-detail">
+        <h1>{{ quiz.title }}</h1>
+        <form method="post" action="{% url 'quiz_answer' quiz.id %}">
+            {% csrf_token %}
+            <ul>
+                {% for question in questions %}
+                    <li>
+                        <p>{{ forloop.counter }}. {{ question.text }}</p>
+                        <ul>
+                            {% for answer in question.answer_set.all %}
+                                <li>
+                                    <input type="radio" id="answer_{{ answer.id }}" name="{{ question.id }}" value="{{ answer.id }}">
+                                    <label for="answer_{{ answer.id }}">{{ answer.text }}</label>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                {% endfor %}
+            </ul>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

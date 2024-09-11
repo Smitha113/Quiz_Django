@@ -1,0 +1,319 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Background Container */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background is behind other content */
+}
+
+/* Background Image */
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Container */
+.container {
+    max-width: 400px;
+    margin: 120px auto;
+    padding: 20px;
+    background-color: rgba(240, 240, 197, 0.9); /* Semi-transparent yellow */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+    text-align: center; /* Center align all content */
+    color: #333; /* Dark text */
+}
+
+/* Header */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align form elements */
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Center align input text */
+}
+
+button {
+    background-color: #f9e366; /* Yellow */
+    color: #333; /* Dark text */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ffcc00; /* Slightly darker yellow */
+}
+
+/* Admin Button */
+.admin-button {
+    background-color: #f9e366; /* Yellow */
+    color: #333; /* Dark text */
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.admin-button:hover {
+    background-color: #ffcc00; /* Slightly darker yellow */
+}
+
+/*-------------QUIZ-LIST-------------*/
+/* Body */
+.quizlist {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Quiz Background Container */
+.quiz-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background is behind other content */
+}
+
+/* Quiz Background Image */
+.quiz-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.quiz-container h1{
+    color: #000000;
+    padding-bottom: 5px;
+}
+
+/* Quiz Container */
+.quiz-container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(240, 240, 197, 0.85); /* Semi-transparent yellow */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+    text-align: center; /* Center align all content */
+    color: #3e3c3c; /* Dark text */
+}
+
+/* Quiz List */
+.quiz-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.quiz-container ul > li {
+    margin-bottom: 20px;
+}
+
+.quiz-topic {
+    cursor: pointer;
+    padding-bottom: 1px;
+    
+}
+
+.quiz-list {
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 2s ease-in-out, opacity 2s ease-in-out; /* Very slow and smooth transition */
+}
+
+.quiz-topic:hover .quiz-list {
+    display: block;
+    max-height: 200px; /* Adjust the max-height as needed */
+    opacity: 1;
+    overflow: auto; /* Enable scrolling if content exceeds max-height */
+}
+
+.quiz-list li {
+    margin-bottom: 5px;
+}
+
+.quiz-list li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.quiz-list li a:hover {
+    color: #ffcc00; /* Yellow */
+}
+
+/*-------------QUIZ_DETAIL------------*/
+
+/* Background Container for Detail */
+.background-container-detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background is behind other content */
+}
+
+/* Background Image for Detail */
+.background-image-detail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9; /* Adjust opacity as desired */
+}
+
+/* Container for Detail */
+.container-detail {
+    max-width: 800px; /* Adjust as needed */
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(255, 246, 192, 0.8); /* Light yellow */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+    color: #333; /* Dark text */
+}
+
+/* Header for Detail */
+.container-detail h1 {
+    margin-bottom: 20px;
+    text-align: center; /* Center align all content */
+}
+
+/* Form for Detail */
+.container-detail form {
+    margin-top: 20px;
+}
+
+/* List Styling for Detail */
+.container-detail ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List Item Styling for Detail */
+.container-detail li {
+    margin-bottom: 20px;
+}
+
+/* Label Styling for Detail */
+.container-detail label {
+    margin-left: 10px;
+}
+
+/* Input Radio Styling for Detail */
+.container-detail input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Submit Button Styling for Detail */
+.container-detail button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #f5ec49; /* Light yellow */
+    color: #333; /* Dark text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit Button Hover Effect for Detail */
+.container-detail button[type="submit"]:hover {
+    background-color: #ebd43e; /* Slightly darker yellow on hover */
+}
+
+/*-------------QUIZ_RESULT------------*/
+
+/* Background Container for Result - Light Yellow Theme */
+.background-container-result-light-yellow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure the background is behind other content */
+}
+
+/* Background Image for Result - Light Yellow Theme */
+.background-image-result-light-yellow {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Container for Result - Light Yellow Theme */
+.container-result-light-yellow {
+    max-width: 500px; /* Adjust as needed */
+    margin: 100px auto;
+    padding: 20px;
+    background-color: rgba(227, 227, 199, 0.9); /* Light yellow */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Box shadow */
+    text-align: center; /* Center align all content */
+    color: #333; /* Dark text */
+}
+
+/* Title for Result - Light Yellow Theme */
+.title-result-light-yellow {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Info for Result - Light Yellow Theme */
+.info-result-light-yellow {
+    margin: 10px 0;
+}
+
+/* Back Link for Result - Light Yellow Theme */
+.back-link-result-light-yellow {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ebd55e; /* Yellow */
+    color: #333; /* Dark text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-link-result-light-yellow:hover {
+    background-color: #ffcc00; /* Slightly darker yellow */
+}
+
